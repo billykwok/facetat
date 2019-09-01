@@ -98,7 +98,7 @@ const style = mq(
 );
 ```
 
-### Compact form
+### Compact Form
 
 ```javascript
 // Expected Result:
@@ -118,3 +118,34 @@ const style = mq(
 //
 const style = mq({ width: [100, 200] });
 ```
+
+## Editor Support
+
+### VSCode
+
+When used with [typescript-styled-plugin](https://github.com/Microsoft/typescript-styled-plugin#configuration), please add `mq` to the list of formatting-eligible tagged template literals.
+
+```json
+{
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": ["styled", "css", "mq"]
+      }
+    ]
+  }
+}
+```
+
+## Support
+
+This library has been continuously used in many of my personal projects, and is regarded as production-ready. In the foreseeable future, I will continuously maintain and support this library.
+
+## Issues and Feedback
+
+Please voice your opinion and report bugs in the [issues](https://github.com/billykwok/facetat/issues) sections of this GitHub project.
+
+## Contributing
+
+You are more than welcome to add more functionalities, improve documentation, fix bugs, and anything you think is needed. The build step is pretty self-explanatory. Please refer to [`package.json`](https://github.com/billykwok/facetat/blob/master/package.json).
