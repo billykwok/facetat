@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/node:12.8.1
+      - image: circleci/node:latest
         environment:
           SHARP_IGNORE_GLOBAL_LIBVIPS: "1"
     working_directory: ~/repo
@@ -37,14 +37,11 @@ jobs:
           paths: ["."]
   release:
     docker:
-      - image: circleci/node:12.8.1
+      - image: circleci/node:latest
     working_directory: ~/repo
     steps:
       - attach_workspace:
           at: ~/repo
-      - run:
-          name: Release
-          command: yarn run semantic-release || true
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
@@ -52,8 +49,8 @@ jobs:
           name: Prevent GitHub RSA prompt
           command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run:
-          name: Publish package
-          command: yarn run release
+          name: Release
+          command: yarn run semantic-release || true
 
 workflows:
   version: 2
