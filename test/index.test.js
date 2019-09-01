@@ -55,6 +55,31 @@ describe('Single-property form', () => {
     const result = mq.paddingBottom(4);
     expect(css(result)).toMatchSnapshot();
   });
+
+  test('with paddingHorizontal', () => {
+    const result = mq.paddingHorizontal(1, null, 2, null, null, 4);
+    expect(css(result)).toMatchSnapshot();
+  });
+
+  test('with paddingVertical', () => {
+    const result = mq.paddingVertical(1, null, 2, null, null, 4);
+    expect(css(result)).toMatchSnapshot();
+  });
+
+  test('with marginHorizontal', () => {
+    const result = mq.marginHorizontal(1, null, 2, null, null, 4);
+    expect(css(result)).toMatchSnapshot();
+  });
+
+  test('with marginVertical', () => {
+    const result = mq.marginVertical(1, null, 2, null, null, 4);
+    expect(css(result)).toMatchSnapshot();
+  });
+
+  test('with square', () => {
+    const result = mq.square(1, null, 2, null, null, 4);
+    expect(css(result)).toMatchSnapshot();
+  });
 });
 
 describe('Chaining form', () => {

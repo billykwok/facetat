@@ -24,8 +24,11 @@ export default function facetat<T: { [string]: number }>(
     if (rest.length) {
       return css.apply(
         null,
-        rest.slice(0, mediaQueries.length).map(function(v, i) {
-          return i ? { [mediaQueries[i]]: v } : v;
+        [first, ...rest.slice(0, mediaQueries.length)].map(function(v, i) {
+          if (Object.keys(v).length) {
+            return i ? { [mediaQueries[i]]: v } : v;
+          }
+          return {};
         })
       );
     }
@@ -34,7 +37,7 @@ export default function facetat<T: { [string]: number }>(
         if (Array.isArray(v)) {
           return i < v.length && v[i] ? mergeProp(a, k, v[i], unit) : a;
         }
-        if (i) return a;
+        if (i || !v) return a;
         return mergeProp(a, k, v, unit);
       }, {});
       return Object.keys(styles).length
@@ -73,9 +76,11 @@ export default function facetat<T: { [string]: number }>(
       return mq.apply(
         null,
         values.map(function(v) {
-          return props.reduce(function(o, p) {
-            return mergeProp(o, p, v, unit);
-          }, {});
+          return v
+            ? props.reduce(function(o, p) {
+                return mergeProp(o, p, v, unit);
+              }, {})
+            : {};
         })
       );
     };
