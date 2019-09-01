@@ -30,12 +30,12 @@ describe('Single-media form', () => {
   });
 
   test('with additional unitless height constraint', () => {
-    const result = mq.XS.minHeight(40)({ width: 18 });
+    const result = mq.XS.h(40)({ width: 18 });
     expect(css(result)).toMatchSnapshot();
   });
 
   test('with additional height constraint', () => {
-    const result = mq.XS.minHeight('640px')({ width: 18 });
+    const result = mq.XS.h('640px')({ width: 18 });
     expect(css(result)).toMatchSnapshot();
   });
 });
@@ -83,21 +83,21 @@ describe('Compact form', () => {
 
 describe('Misc usage', () => {
   test('with customized unitless min-width', () => {
-    const result = mq.minWidth(40)({ width: '100%' });
+    const result = mq.w(40)({ width: '100%' });
     expect(css(result)).toMatchSnapshot();
   });
 
   test('with customized min-width', () => {
-    const result = mq.minWidth('640px')({ width: '100%' });
+    const result = mq.w('640px')({ width: '100%' });
     expect(css(result)).toMatchSnapshot();
   });
   test('with customized unitless min-height', () => {
-    const result = mq.minHeight(40)({ width: '100%' });
+    const result = mq.h(40)({ width: '100%' });
     expect(css(result)).toMatchSnapshot();
   });
 
   test('with customized min-height', () => {
-    const result = mq.minHeight('640px')({ width: '100%' });
+    const result = mq.h('640px')({ width: '100%' });
     expect(css(result)).toMatchSnapshot();
   });
 });

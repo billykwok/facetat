@@ -41,23 +41,23 @@ export default function facetat<T: { [string]: number }>(
     mq[bpNames[i]] = function(...args: Array<mixed>): mixed {
       return buildSingleMedia(mediaQueries[i], args);
     };
-    mq[bpNames[i]].minHeight = function(value: string | number) {
+    mq[bpNames[i]].h = function(value: string | number) {
+      const height = appendUnit(value, unit);
+      const query = `${mediaQueries[i]} and (min-height:${height})`;
       return function(...args: Array<mixed>) {
-        const height = appendUnit(value, unit);
-        const query = `${mediaQueries[i]} and (min-height:${height})`;
         return buildSingleMedia(query, args);
       };
     };
   }
-  mq.minWidth = function(value: string | number) {
+  mq.w = function(value: string | number) {
+    const query = createMediaQuery(value, unit);
     return function(...args: Array<mixed>): mixed {
-      const query = createMediaQuery(value, unit);
       return buildSingleMedia(query, args);
     };
   };
-  mq.minHeight = function(value: string | number) {
+  mq.h = function(value: string | number) {
+    const query = `@media(min-height:${appendUnit(value, unit)})`;
     return function(...args: Array<mixed>): mixed {
-      const query = `@media(min-height:${appendUnit(value, unit)})`;
       return buildSingleMedia(query, args);
     };
   };
