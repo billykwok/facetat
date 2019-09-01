@@ -1,7 +1,7 @@
 {
   "name": "facetat",
   "description": "A powerful yet neat way to write responsive styles for emotion CSS-in-Js",
-  "version": "1.0.1",
+  "version": "0.0.0-dev",
   "author": "Billy Kwok <xobkwok@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -29,7 +29,7 @@
     "update-type": "flow-typed install --ignoreDeps dev bundled",
     "clean": "rm -rf lib",
     "build": "yarn clean && rollup -c rollup.config.js",
-    "semantic-release": "semantic-release"
+    "release": "semantic-release || true"
   },
   "resolutions": {
     "lodash": "^4.17.15",

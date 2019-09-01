@@ -50,7 +50,7 @@ jobs:
           command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run:
           name: Release
-          command: yarn run semantic-release || true
+          command: yarn run release
 
 workflows:
   version: 2
