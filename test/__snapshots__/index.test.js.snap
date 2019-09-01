@@ -29,6 +29,60 @@ Object {
 }
 `;
 
+exports[`Misc usage with customized min-height 1`] = `
+Object {
+  "map": undefined,
+  "name": "1i86alf",
+  "next": undefined,
+  "styles": "@media(min-height:640px){width:100%;}",
+}
+`;
+
+exports[`Misc usage with customized min-width 1`] = `
+Object {
+  "map": undefined,
+  "name": "ccf86",
+  "next": undefined,
+  "styles": "@media(min-width:640px){width:100%;}",
+}
+`;
+
+exports[`Misc usage with customized unitless min-height 1`] = `
+Object {
+  "map": undefined,
+  "name": "4qmkok",
+  "next": undefined,
+  "styles": "@media(min-height:40rem){width:100%;}",
+}
+`;
+
+exports[`Misc usage with customized unitless min-width 1`] = `
+Object {
+  "map": undefined,
+  "name": "sk8x50",
+  "next": undefined,
+  "styles": "@media(min-width:40rem){width:100%;}",
+}
+`;
+
+exports[`Single-media form with additional height constraint 1`] = `
+Object {
+  "map": undefined,
+  "name": "ztzb64",
+  "next": undefined,
+  "styles": "@media(min-width:20rem) and (min-height:640px){width:18px;}",
+}
+`;
+
+exports[`Single-media form with additional unitless height constraint 1`] = `
+Object {
+  "map": undefined,
+  "name": "1ktezg3",
+  "next": undefined,
+  "styles": "@media(min-width:20rem) and (min-height:40rem){width:18px;}",
+}
+`;
+
 exports[`Single-media form with multiple plain objects 1`] = `
 Object {
   "map": undefined,

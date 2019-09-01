@@ -6,6 +6,7 @@ import mergeProp from './mergeProp';
 import buildSingleMedia from './buildSingleMedia';
 
 import { css } from '@emotion/core';
+import createMediaQuery from './createMediaQuery';
 
 type Css = (strings: Array<string>, ...expressions: Array<number>) => string;
 type Options = { unit: 'em' | 'rem' | 'px' };
@@ -40,7 +41,7 @@ export default function facetat<T: { [string]: number }>(
     mq[bpNames[i]] = function(...args: Array<mixed>): mixed {
       return buildSingleMedia(mediaQueries[i], args);
     };
-    mq[bpNames[i]].height = function(value: string | number): mixed {
+    mq[bpNames[i]].minHeight = function(value: string | number) {
       return function(...args: Array<mixed>) {
         const height = appendUnit(value, unit);
         const query = `${mediaQueries[i]} and (min-height:${height})`;
@@ -48,6 +49,18 @@ export default function facetat<T: { [string]: number }>(
       };
     };
   }
+  mq.minWidth = function(value: string | number) {
+    return function(...args: Array<mixed>): mixed {
+      const query = createMediaQuery(value, unit);
+      return buildSingleMedia(query, args);
+    };
+  };
+  mq.minHeight = function(value: string | number) {
+    return function(...args: Array<mixed>): mixed {
+      const query = `@media(min-height:${appendUnit(value, unit)})`;
+      return buildSingleMedia(query, args);
+    };
+  };
 
   function createShortcut(props: Array<string>) {
     return function(...values: Array<number | string>) {

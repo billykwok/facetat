@@ -1,6 +1,8 @@
 // @flow
 const map: { [string]: Array<string> } = {
   square: ['width', 'height'],
+  marginHorizontal: ['marginLeft', 'marginRight'],
+  marginVertical: ['marginTop', 'marginBottom'],
   paddingHorizontal: ['paddingLeft', 'paddingRight'],
   paddingVertical: ['paddingTop', 'paddingBottom']
 };
