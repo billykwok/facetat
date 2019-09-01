@@ -140,8 +140,8 @@ Object {
 exports[`Single-property form with single argument 1`] = `
 Object {
   "map": undefined,
-  "name": "gerakb",
+  "name": "1lcftrr",
   "next": undefined,
-  "styles": "padding-bottom:4;@media(min-width:20rem){padding-bottom:r;}@media(min-width:28rem){padding-bottom:e;}@media(min-width:36rem){padding-bottom:m;}@media(min-width:48rem){}@media(min-width:60rem){}@media(min-width:75rem){}",
+  "styles": "padding-bottom:4rem;",
 }
 `;
