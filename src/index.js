@@ -26,7 +26,7 @@ export default function facetat<T: { [string]: number }>(
         null,
         [first, ...rest.slice(0, mediaQueries.length)].map(function(v, i) {
           if (Object.keys(v).length) {
-            return i ? { [mediaQueries[i]]: v } : v;
+            return i ? { [mediaQueries[i - 1]]: v } : v;
           }
           return {};
         })

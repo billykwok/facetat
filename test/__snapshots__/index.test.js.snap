@@ -3,11 +3,11 @@
 exports[`Chaining form with css 1`] = `
 Object {
   "map": undefined,
-  "name": "geru1f",
+  "name": "w7vlh",
   "next": undefined,
   "styles": "
         width: 100%;
-      @media(min-width:28rem){
+      @media(min-width:20rem){
         width: 18rem;
       }",
 }
@@ -16,9 +16,9 @@ Object {
 exports[`Chaining form with plain object 1`] = `
 Object {
   "map": undefined,
-  "name": "1jmsllq",
+  "name": "v5szp2",
   "next": undefined,
-  "styles": "width:100%;@media(min-width:28rem){width:18rem;}",
+  "styles": "width:100%;@media(min-width:20rem){width:18rem;}",
 }
 `;
 
@@ -124,54 +124,54 @@ Object {
 exports[`Single-property form with marginHorizontal 1`] = `
 Object {
   "map": undefined,
-  "name": "1r11ppk",
+  "name": "1sv7vo6",
   "next": undefined,
-  "styles": "margin-left:1rem;margin-right:1rem;@media(min-width:36rem){margin-left:2rem;margin-right:2rem;}@media(min-width:75rem){margin-left:4rem;margin-right:4rem;}",
+  "styles": "margin-left:1rem;margin-right:1rem;@media(min-width:28rem){margin-left:2rem;margin-right:2rem;}@media(min-width:60rem){margin-left:4rem;margin-right:4rem;}",
 }
 `;
 
 exports[`Single-property form with marginVertical 1`] = `
 Object {
   "map": undefined,
-  "name": "icttuo",
+  "name": "93qv2k",
   "next": undefined,
-  "styles": "margin-top:1rem;margin-bottom:1rem;@media(min-width:36rem){margin-top:2rem;margin-bottom:2rem;}@media(min-width:75rem){margin-top:4rem;margin-bottom:4rem;}",
+  "styles": "margin-top:1rem;margin-bottom:1rem;@media(min-width:28rem){margin-top:2rem;margin-bottom:2rem;}@media(min-width:60rem){margin-top:4rem;margin-bottom:4rem;}",
 }
 `;
 
 exports[`Single-property form with number of argument fewer than that of breakpoints 1`] = `
 Object {
   "map": undefined,
-  "name": "13qywfh",
+  "name": "1x4cfvp",
   "next": undefined,
-  "styles": "width:100%;@media(min-width:28rem){width:18rem;}@media(min-width:36rem){width:24rem;}@media(min-width:48rem){width:32rem;}@media(min-width:60rem){width:44rem;}",
+  "styles": "width:100%;@media(min-width:20rem){width:18rem;}@media(min-width:28rem){width:24rem;}@media(min-width:36rem){width:32rem;}@media(min-width:48rem){width:44rem;}",
 }
 `;
 
 exports[`Single-property form with number of argument more than that of breakpoints 1`] = `
 Object {
   "map": undefined,
-  "name": "1npe94l",
+  "name": "1rsqg0i",
   "next": undefined,
-  "styles": "width:100%;@media(min-width:28rem){width:18rem;}@media(min-width:36rem){width:24rem;}@media(min-width:48rem){width:32rem;}@media(min-width:60rem){width:44rem;}@media(min-width:75rem){width:54rem;}undefined{width:72rem;}",
+  "styles": "width:100%;@media(min-width:20rem){width:18rem;}@media(min-width:28rem){width:24rem;}@media(min-width:36rem){width:32rem;}@media(min-width:48rem){width:44rem;}@media(min-width:60rem){width:54rem;}@media(min-width:75rem){width:72rem;}",
 }
 `;
 
 exports[`Single-property form with paddingHorizontal 1`] = `
 Object {
   "map": undefined,
-  "name": "9gplkj",
+  "name": "19x4o37",
   "next": undefined,
-  "styles": "padding-left:1rem;padding-right:1rem;@media(min-width:36rem){padding-left:2rem;padding-right:2rem;}@media(min-width:75rem){padding-left:4rem;padding-right:4rem;}",
+  "styles": "padding-left:1rem;padding-right:1rem;@media(min-width:28rem){padding-left:2rem;padding-right:2rem;}@media(min-width:60rem){padding-left:4rem;padding-right:4rem;}",
 }
 `;
 
 exports[`Single-property form with paddingVertical 1`] = `
 Object {
   "map": undefined,
-  "name": "1sfy77k",
+  "name": "1jyjxt3",
   "next": undefined,
-  "styles": "padding-top:1rem;padding-bottom:1rem;@media(min-width:36rem){padding-top:2rem;padding-bottom:2rem;}@media(min-width:75rem){padding-top:4rem;padding-bottom:4rem;}",
+  "styles": "padding-top:1rem;padding-bottom:1rem;@media(min-width:28rem){padding-top:2rem;padding-bottom:2rem;}@media(min-width:60rem){padding-top:4rem;padding-bottom:4rem;}",
 }
 `;
 
@@ -187,8 +187,8 @@ Object {
 exports[`Single-property form with square 1`] = `
 Object {
   "map": undefined,
-  "name": "ub8u1o",
+  "name": "74iqde",
   "next": undefined,
-  "styles": "width:1rem;height:1rem;@media(min-width:36rem){width:2rem;height:2rem;}@media(min-width:75rem){width:4rem;height:4rem;}",
+  "styles": "width:1rem;height:1rem;@media(min-width:28rem){width:2rem;height:2rem;}@media(min-width:60rem){width:4rem;height:4rem;}",
 }
 `;
