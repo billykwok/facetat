@@ -31,6 +31,11 @@
     "build": "yarn clean && rollup -c rollup.config.js",
     "semantic-release": "semantic-release"
   },
+  "resolutions": {
+    "lodash": "^4.17.15",
+    "lodash.template": "^4.5.0",
+    "lodash.merge": "^4.6.2"
+  },
   "peerDependencies": {
     "@emotion/core": "^10.0.17"
   },
