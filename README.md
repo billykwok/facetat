@@ -16,7 +16,7 @@ const mq = facetat(
 );
 ```
 
-### Single Media Query
+### Single-media Form
 
 ```javascript
 // Expected Result:
@@ -34,16 +34,13 @@ import { css } from '@emotion/core';
 const style = mq.XS(css`width: 100px;`);
 
 // Shortcut of the above
-const style = mq.XS.css`width: 100px;`;
-
-// Shortcut of the above
 const style = mq.XS`width: 100px;`;
 
 // Plain Javascript object
 const style = mq.XS({ width: 100 });
 ```
 
-### Media Query Sequence
+### Single-property Form
 
 ```javascript
 // Expected Result:
@@ -65,7 +62,7 @@ const style = mq.XS({ width: 100 });
 const style = mq.width(null, 100, 200);
 ```
 
-### Chaining Media Query
+### Chaining Form
 
 ```javascript
 // Expected Result:
@@ -94,4 +91,25 @@ const style = mq(
   { width: 100 },
   { width: 200 }
 );
+```
+
+### Compact form
+
+```javascript
+// Expected Result:
+//
+// @media (min-width: 1rem) {
+//   [className] {
+//     width: 100rem;
+//   }
+// }
+// @media (min-width: 1rem) and (max-width: 2rem) {
+//   [className] {
+//     width: 200rem;
+//   }
+// }
+
+// Usage:
+//
+const style = mq({ width: [100, 200] });
 ```
