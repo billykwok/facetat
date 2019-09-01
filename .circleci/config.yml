@@ -1,0 +1,65 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/node:12.8.1
+        environment:
+          SHARP_IGNORE_GLOBAL_LIBVIPS: "1"
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore node_modules cache
+          keys:
+            - v1-node-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - v1-node-{{ arch }}-{{ .Branch }}-
+            - v1-node-{{ arch }}-
+      - run:
+          name: Nodejs Version
+          command: node --version
+      - run:
+          name: Install packages
+          command: yarn
+      - run:
+          name: Build packages
+          command: yarn build
+      - run:
+          name: Test packages
+          command: yarn test
+      - save_cache:
+          name: Save node_modules cache
+          key: v1-node-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - persist_to_workspace:
+          root: ~/repo
+          paths: ["."]
+  release:
+    docker:
+      - image: circleci/node:12.8.1
+    working_directory: ~/repo
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Prevent GitHub RSA prompt
+          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+      - run:
+          name: Publish package
+          command: yarn run release
+
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+      - test
+      - release:
+          requires:
+            - test
+          filters:
+            branches:
+              only: /^master$/
