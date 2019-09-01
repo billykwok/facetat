@@ -50,6 +50,11 @@ describe('Single-property form', () => {
     const result = mq.width('100%', 18, 24, 32, 44);
     expect(css(result)).toMatchSnapshot();
   });
+
+  test('with single argument', () => {
+    const result = mq.paddingBottom(4);
+    expect(css(result)).toMatchSnapshot();
+  });
 });
 
 describe('Chaining form', () => {

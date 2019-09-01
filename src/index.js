@@ -31,9 +31,15 @@ export default function facetat<T: { [string]: number }>(
     }
     return [null, ...mediaQueries].reduce(function(o, q, i) {
       const styles = Object.entries(first).reduce(function(a, [k, v]) {
-        return i < v.length && v[i] ? mergeProp(a, k, v[i], unit) : a;
+        if (Array.isArray(v)) {
+          return i < v.length && v[i] ? mergeProp(a, k, v[i], unit) : a;
+        }
+        if (i) return a;
+        return mergeProp(a, k, v, unit);
       }, {});
-      return Object.assign(o, q ? { [q]: styles } : styles);
+      return Object.keys(styles).length
+        ? Object.assign({}, o, q ? { [q]: styles } : styles)
+        : o;
     }, {});
   }
 

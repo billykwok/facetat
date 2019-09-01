@@ -7,5 +7,5 @@ export default function mergeProp(
   v: number | string,
   unit: 'rem' | 'em' | 'px'
 ): { [string]: number | string } {
-  return Object.assign(style, { [k]: appendUnit(v, unit) });
+  return Object.assign({}, style, { [k]: appendUnit(v, unit) });
 }

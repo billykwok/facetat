@@ -136,3 +136,12 @@ Object {
   "styles": "width:18rem;@media(min-width:28rem){width:24rem;}@media(min-width:36rem){width:32rem;}@media(min-width:48rem){width:44rem;}@media(min-width:60rem){width:54rem;}@media(min-width:75rem){width:72rem;}",
 }
 `;
+
+exports[`Single-property form with single argument 1`] = `
+Object {
+  "map": undefined,
+  "name": "gerakb",
+  "next": undefined,
+  "styles": "padding-bottom:4;@media(min-width:20rem){padding-bottom:r;}@media(min-width:28rem){padding-bottom:e;}@media(min-width:36rem){padding-bottom:m;}@media(min-width:48rem){}@media(min-width:60rem){}@media(min-width:75rem){}",
+}
+`;
