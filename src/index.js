@@ -1,6 +1,5 @@
 // @flow
 import buildBreakpoints from './buildBreakpoints';
-import createMediaQuery from './createMediaQuery';
 import appendUnit from './appendUnit';
 import mapPropShortcut from './mapPropShortcut';
 import mergeProp from './mergeProp';

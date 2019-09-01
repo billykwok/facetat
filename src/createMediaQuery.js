@@ -3,8 +3,7 @@ import appendUnit from './appendUnit';
 
 export default function createMediaQuery(
   value: number,
-  unit: 'rem' | 'em' | 'px',
-  direction: 'width' | 'height' = 'width'
+  unit: 'rem' | 'em' | 'px'
 ) {
-  return '@media(min-' + direction + ':' + appendUnit(value, unit) + ')';
+  return '@media(min-width:' + appendUnit(value, unit) + ')';
 }

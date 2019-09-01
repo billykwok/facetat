@@ -1,0 +1,12 @@
+{
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "tags": ["css", "mq"]
+      }
+    ]
+  }
+}
