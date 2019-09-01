@@ -1,5 +1,7 @@
 # facetat
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://greenkeeper.io/)
+
 Like [facepaint](https://github.com/emotion-js/facepaint), but even more powerful.
 
 ## Usage
