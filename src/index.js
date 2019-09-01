@@ -16,7 +16,7 @@ export default function facetat<T: { [string]: number }>(
   breakpoints: T,
   options: Options
 ) {
-  const { unit } = options;
+  const { unit = 'rem' } = options;
   const [bpNames, mediaQueries] = buildBreakpoints(breakpoints, unit);
 
   function mq(first: mixed, ...rest: Array<mixed>): mixed {
