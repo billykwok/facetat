@@ -1,11 +1,11 @@
 # facetat
 
-[![npm version](https://badge.fury.io/js/facetat.svg)](https://www.npmjs.com/package/facetat)
+[![npm version](https://badgen.net/npm/v/facetat)](https://www.npmjs.com/package/facetat)
 [![download](https://badgen.net/npm/dm/facetat)](https://www.npmjs.com/package/facetat)
 [![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
 [![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
 [![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://github.com/billykwok/facetat)
-[![License](https://badgen.net/npm/license/facetat)](https://badgen.net/npm/license/facetat)
+[![License](https://badgen.net/npm/license/facetat)](https://github.com/billykwok/facetat/blob/master/LICENSE)
 [![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
 
 Like [facepaint](https://github.com/emotion-js/facepaint), but even more powerful.
@@ -44,10 +44,10 @@ const mq = facetat(
 //
 // Emotion css object
 import { css } from '@emotion/core';
-const style = mq.XS(css`width: 100px;`);
+const style = mq.XS(css`width: 100rem;`);
 
 // Shortcut of the above
-const style = mq.XS`width: 100px;`;
+const style = mq.XS`width: 100rem;`;
 
 // Plain Javascript object
 const style = mq.XS({ width: 100 });
@@ -72,7 +72,7 @@ const style = mq.XS({ width: 100 });
 // Usage:
 //
 // Plain Javascript object
-const style = mq.width(null, 100, 200);
+const style = mq.width(null, 100, '200rem');
 ```
 
 ### Chaining Form
@@ -80,6 +80,9 @@ const style = mq.width(null, 100, 200);
 ```javascript
 // Expected Result:
 //
+// [className] {
+//   width: 50px;
+// }
 // @media (min-width: 1rem) {
 //   [className] {
 //     width: 100rem;
@@ -95,14 +98,16 @@ const style = mq.width(null, 100, 200);
 //
 // Emotion css object
 const style = mq(
-  css`width: 100px;`,
-  css`width: 200px;`
+  css`width: 50px;`,
+  css`width: 100rem;`,
+  css`width: 200rem;`
 );
 
 // Plain Javascript object
 const style = mq(
+  { width: '50px' },
   { width: 100 },
-  { width: 200 }
+  { width: '200rem' }
 );
 ```
 
@@ -111,6 +116,9 @@ const style = mq(
 ```javascript
 // Expected Result:
 //
+// [className] {
+//   width: 50px;
+// }
 // @media (min-width: 1rem) {
 //   [className] {
 //     width: 100rem;
@@ -124,7 +132,7 @@ const style = mq(
 
 // Usage:
 //
-const style = mq({ width: [100, 200] });
+const style = mq({ width: ['50px', 100, '200rem'] });
 ```
 
 ## Editor Support
