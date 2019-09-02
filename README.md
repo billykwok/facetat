@@ -1,6 +1,6 @@
 # facetat
 
-[![npm version](https://badge.fury.io/js/facetat.svg)](https://badge.fury.io/js/facetat) [![download](https://badgen.net/npm/dm/facetat)](https://badgen.net/npm/dm/facetat) [![minified size](https://badgen.net/bundlephobia/min/facetat)](https://badgen.net/bundlephobia/min/facetat) [![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://badgen.net/bundlephobia/minzip/facetat) [![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://greenkeeper.io/) [![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
+[![npm version](https://badge.fury.io/js/facetat.svg)](https://www.npmjs.com/package/facetat) [![download](https://badgen.net/npm/dm/facetat)](https://www.npmjs.com/package/facetat) [![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4) [![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4) [![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://github.com/billykwok/facetat) [![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
 
 Like [facepaint](https://github.com/emotion-js/facepaint), but even more powerful.
 
@@ -13,10 +13,12 @@ import facetat from 'facetat';
 
 // Initialize
 const mq = facetat(
-  // A map from string to number
-  // { mobile: 1, phablet: 2, tablet: 3, laptop: 5, desktop: 6 }
+  // A breakpoint map from string to number that can be of any size.
+  // You can name them anything as your want.
+  // e.g. { mobile: 1, phablet: 2, tablet: 3, laptop: 5, desktop: 6 }
   { XS: 1, SM: 2, MD: 3, LG: 5, XL: 6 },
-  // The default unit when a unitless number is specified
+  // The default unit when a unitless number is specified.
+  // Accept rem, em, px, or other valid css units
   { unit: 'rem' }
 );
 ```
@@ -149,3 +151,7 @@ Please voice your opinion and report bugs in the [issues](https://github.com/bil
 ## Contributing
 
 You are more than welcome to add more functionalities, improve documentation, fix bugs, and anything you think is needed. The build step is pretty self-explanatory. Please refer to [`package.json`](https://github.com/billykwok/facetat/blob/master/package.json).
+
+## License
+
+MIT
