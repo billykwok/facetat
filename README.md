@@ -1,6 +1,12 @@
 # facetat
 
-[![npm version](https://badge.fury.io/js/facetat.svg)](https://www.npmjs.com/package/facetat) [![download](https://badgen.net/npm/dm/facetat)](https://www.npmjs.com/package/facetat) [![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4) [![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4) [![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://github.com/billykwok/facetat) [![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
+[![npm version](https://badge.fury.io/js/facetat.svg)](https://www.npmjs.com/package/facetat)
+[![download](https://badgen.net/npm/dm/facetat)](https://www.npmjs.com/package/facetat)
+[![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
+[![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
+[![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://github.com/billykwok/facetat)
+[![License](https://badgen.net/npm/license/facetat)](https://badgen.net/npm/license/facetat)
+[![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
 
 Like [facepaint](https://github.com/emotion-js/facepaint), but even more powerful.
 
