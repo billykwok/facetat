@@ -32,6 +32,7 @@
     "release": "semantic-release || true"
   },
   "resolutions": {
+    "mem": "^5.1.1",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
     "lodash.merge": "^4.6.2",
