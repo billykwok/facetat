@@ -1,4 +1,3 @@
-// @flow
 import buildBreakpoints from './buildBreakpoints';
 import appendUnit from './appendUnit';
 import mapPropShortcut from './mapPropShortcut';
@@ -7,19 +6,19 @@ import buildSingleMedia from './buildSingleMedia';
 
 import { css } from '@emotion/core';
 import createMediaQuery from './createMediaQuery';
+import Unit from './unit';
 
-type Css = (strings: Array<string>, ...expressions: Array<number>) => string;
-type Options = { unit: 'em' | 'rem' | 'px' };
-type MQ = { (Array<string>, Options): Css, [string]: Css };
-
-export default function facetat<T: { [string]: number }>(
+export default function facetat<T extends { [prop: string]: number }>(
   breakpoints: T,
-  options: Options
+  options: { unit: Unit }
 ) {
-  const { unit = 'rem' } = options;
+  const { unit = Unit.rem } = options;
   const [bpNames, mediaQueries] = buildBreakpoints(breakpoints, unit);
 
-  function mq(first: mixed, ...rest: Array<mixed>): mixed {
+  function mq(
+    first: { [prop: string]: any },
+    ...rest: { [prop: string]: any }[]
+  ): { [prop: string]: any } {
     if (!first) return {};
     if (rest.length) {
       return css.apply(
@@ -47,32 +46,32 @@ export default function facetat<T: { [string]: number }>(
   }
 
   for (let i = 0; i < mediaQueries.length; ++i) {
-    mq[bpNames[i]] = function(...args: Array<mixed>): mixed {
+    mq[bpNames[i]] = function(...args: any[]): any {
       return buildSingleMedia(mediaQueries[i], args);
     };
     mq[bpNames[i]].h = function(value: string | number) {
       const height = appendUnit(value, unit);
       const query = `${mediaQueries[i]} and (min-height:${height})`;
-      return function(...args: Array<mixed>) {
+      return function(...args: any[]) {
         return buildSingleMedia(query, args);
       };
     };
   }
   mq.w = function(value: string | number) {
     const query = createMediaQuery(value, unit);
-    return function(...args: Array<mixed>): mixed {
+    return function(...args: any[]): any {
       return buildSingleMedia(query, args);
     };
   };
   mq.h = function(value: string | number) {
     const query = `@media(min-height:${appendUnit(value, unit)})`;
-    return function(...args: Array<mixed>): mixed {
+    return function(...args: any[]): any {
       return buildSingleMedia(query, args);
     };
   };
 
-  function createShortcut(props: Array<string>) {
-    return function(...values: Array<number | string>) {
+  function createShortcut(props: string[]) {
+    return function(...values: (number | string)[]) {
       return mq.apply(
         null,
         values.map(function(v) {
@@ -86,10 +85,13 @@ export default function facetat<T: { [string]: number }>(
     };
   }
 
-  const cache: { [string]: mixed } = {};
+  const cache: { [prop: string]: any } = {};
 
-  return new Proxy(mq, {
-    get(target: { [string]: mixed }, prop: string, receiver): mixed {
+  return new Proxy<{
+    (...props: { [prop: string]: any }[]): { [prop: string]: any };
+    [prop: string]: any;
+  }>(mq, {
+    get(target: { [prop: string]: any }, prop: string, receiver): any {
       if (prop in target) return Reflect.get(target, prop, receiver);
       if (prop in cache) return cache[prop];
       return (cache[prop] = createShortcut(mapPropShortcut(prop)));

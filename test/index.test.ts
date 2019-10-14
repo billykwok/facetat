@@ -1,11 +1,11 @@
-// @flow
-import facetat from '../src';
-
 import { css } from '@emotion/core';
+
+import facetat from '../src';
+import Unit from '../src/unit';
 
 const mq = facetat(
   { XS: 20, SM: 28, MD: 36, ML: 48, LG: 60, XL: 75 },
-  { unit: 'rem' }
+  { unit: Unit.rem }
 );
 
 describe('Single-media form', () => {

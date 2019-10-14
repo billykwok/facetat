@@ -1,11 +1,11 @@
-// @flow
 import appendUnit from './appendUnit';
+import Unit from './unit';
 
 export default function mergeProp(
-  style: { [string]: number | string },
+  style: { [prop: string]: number | string },
   k: string,
   v: number | string,
-  unit: 'rem' | 'em' | 'px'
-): { [string]: number | string } {
+  unit: Unit
+): { [prop: string]: number | string } {
   return Object.assign({}, style, { [k]: appendUnit(v, unit) });
 }
