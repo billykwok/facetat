@@ -6,7 +6,10 @@
   "license": "MIT",
   "keywords": [
     "react",
-    "responsive"
+    "responsive",
+    "css",
+    "emotion",
+    "utility"
   ],
   "types": "types/index.d.ts",
   "main": "lib/index.js",
