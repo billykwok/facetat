@@ -8,6 +8,8 @@
 [![License](https://badgen.net/npm/license/facetat)](https://github.com/billykwok/facetat/blob/master/LICENSE)
 [![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
 
+A neat and efficient way to write responsive styles for CSS-in-Js libraries.
+
 Like [facepaint](https://github.com/emotion-js/facepaint), but even more powerful.
 
 ## Usage
@@ -42,7 +44,7 @@ const mq = facetat(
 
 // Usage:
 //
-// Emotion css object
+// Emotion css object from any CSS-in-JS libraries, for example, emotion
 import { css } from '@emotion/core';
 const style = mq.XS(css`width: 100rem;`);
 
