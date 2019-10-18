@@ -8,7 +8,9 @@
     "react",
     "responsive"
   ],
+  "types": "types/index.d.ts",
   "main": "lib/index.js",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/billykwok/facetat"
@@ -26,10 +28,17 @@
   "scripts": {
     "test": "jest",
     "commit": "commit",
-    "update-type": "flow-typed install --ignoreDeps dev bundled",
     "clean": "rm -rf lib",
     "build": "yarn clean && rollup -c rollup.config.js",
-    "release": "semantic-release || true"
+    "release": "semantic-release || true",
+    "eslint": "eslint ./src/**",
+    "dtslint": "dtslint --localTs node_modules/typescript/lib types",
+    "lint": "yarn eslint && yarn dtslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
   },
   "resolutions": {
     "mem": "^5.1.1",
@@ -53,16 +62,20 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/prompt-cli": "^8.2.0",
     "@emotion/core": "^10.0.21",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
+    "@types/react": "^16.9.9",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^25.0.0",
     "cross-env": "^6.0.3",
+    "csstype": "^2.6.7",
+    "dtslint": "^0.9.8",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-import-resolver-node": "^0.3.2",
     "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-emotion": "^10.0.14",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -72,7 +85,7 @@
     "jest-emotion": "^10.0.17",
     "prettier": "^1.18.2",
     "react": "^16.10.2",
-    "rollup": "^1.23.1",
+    "rollup": "^1.25.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
