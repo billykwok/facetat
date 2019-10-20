@@ -32,3 +32,5 @@ mq(
 mq({ width: '50px' }, { width: 100 }, { width: '200rem' });
 
 mq({ width: ['50px', 100, '200rem'] });
+
+mq.ajrlarajkw({ width: ['50px', 100, '200rem'] });
