@@ -44,9 +44,14 @@ const mq = facetat(
 
 // Usage:
 //
-// Emotion css object from any CSS-in-JS libraries, for example, emotion
+// CSS function from any CSS-in-Js libraries, for example, emotion
 import { css } from '@emotion/core';
-const style = mq.XS(css`width: 100rem;`);
+
+const style = mq.XS(
+  css`
+    width: 100rem;
+  `
+);
 
 // Shortcut of the above
 const style = mq.XS`width: 100rem;`;
@@ -100,17 +105,19 @@ const style = mq.width(null, 100, '200rem');
 //
 // Emotion css object
 const style = mq(
-  css`width: 50px;`,
-  css`width: 100rem;`,
-  css`width: 200rem;`
+  css`
+    width: 50px;
+  `,
+  css`
+    width: 100rem;
+  `,
+  css`
+    width: 200rem;
+  `
 );
 
 // Plain Javascript object
-const style = mq(
-  { width: '50px' },
-  { width: 100 },
-  { width: '200rem' }
-);
+const style = mq({ width: '50px' }, { width: 100 }, { width: '200rem' });
 ```
 
 ### Compact Form
@@ -166,7 +173,7 @@ Please voice your opinion and report bugs in the [issues](https://github.com/bil
 
 ## Contributing
 
-You are more than welcome to add more functionalities, improve documentation, fix bugs, and anything you think is needed. The build step is pretty self-explanatory. Please refer to [`package.json`](https://github.com/billykwok/facetat/blob/master/package.json).
+You are more than welcome to add more functionalities, improve documentation, fix bugs, and anything you think is needed. The build step is pretty self-explanatory. Please refer to [CONTRIBUTING.md](https://github.com/billykwok/facetat/blob/master/CONTRIBUTING.md) for more details.
 
 ## License
 
