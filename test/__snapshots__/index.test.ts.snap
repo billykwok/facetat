@@ -3,13 +3,14 @@
 exports[`Chaining form with css 1`] = `
 Object {
   "map": undefined,
-  "name": "w7vlh",
+  "name": "l4xidq",
   "next": undefined,
   "styles": "
         width: 100%;
-      @media(min-width:20rem){
+      ;@media(min-width:20rem){
         width: 18rem;
-      }",
+      ;}",
+  "toString": [Function],
 }
 `;
 
@@ -19,6 +20,7 @@ Object {
   "name": "v5szp2",
   "next": undefined,
   "styles": "width:100%;@media(min-width:20rem){width:18rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -28,96 +30,107 @@ Object {
   "name": "1mcmhjb",
   "next": undefined,
   "styles": "width:100%;background:red;@media(min-width:20rem){width:18rem;}@media(min-width:28rem){width:24rem;background:blue;}@media(min-width:36rem){width:32rem;}@media(min-width:48rem){width:44rem;}@media(min-width:60rem){width:54rem;background:green;}@media(min-width:75rem){width:72rem;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Misc usage with customized min-height 1`] = `
 Object {
   "map": undefined,
-  "name": "1i86alf",
+  "name": "8n2xwn",
   "next": undefined,
-  "styles": "@media(min-height:640px){width:100%;}",
+  "styles": "@media(min-height:640px){width:100%;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Misc usage with customized min-width 1`] = `
 Object {
   "map": undefined,
-  "name": "ccf86",
+  "name": "g9ne8s",
   "next": undefined,
-  "styles": "@media(min-width:640px){width:100%;}",
+  "styles": "@media(min-width:640px){width:100%;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Misc usage with customized unitless min-height 1`] = `
 Object {
   "map": undefined,
-  "name": "4qmkok",
+  "name": "t5ubpt",
   "next": undefined,
-  "styles": "@media(min-height:40rem){width:100%;}",
+  "styles": "@media(min-height:40rem){width:100%;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Misc usage with customized unitless min-width 1`] = `
 Object {
   "map": undefined,
-  "name": "sk8x50",
+  "name": "1m9fkce",
   "next": undefined,
-  "styles": "@media(min-width:40rem){width:100%;}",
+  "styles": "@media(min-width:40rem){width:100%;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Single-media form with additional height constraint 1`] = `
 Object {
   "map": undefined,
-  "name": "ztzb64",
+  "name": "1dkrsrd",
   "next": undefined,
-  "styles": "@media(min-width:20rem) and (min-height:640px){width:18px;}",
+  "styles": "@media(min-width:20rem) and (min-height:640px){width:18px;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Single-media form with additional unitless height constraint 1`] = `
 Object {
   "map": undefined,
-  "name": "1ktezg3",
+  "name": "16q7bo9",
   "next": undefined,
-  "styles": "@media(min-width:20rem) and (min-height:40rem){width:18px;}",
+  "styles": "@media(min-width:20rem) and (min-height:40rem){width:18px;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Single-media form with multiple plain objects 1`] = `
 Object {
   "map": undefined,
-  "name": "18t2b45",
+  "name": "1sanp7v",
   "next": undefined,
-  "styles": "@media(min-width:20rem){width:18px;font-size:16px;}",
+  "styles": "@media(min-width:20rem){width:18px;font-size:16px;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Single-media form with multiple plain objects with a mixed of unit mode 1`] = `
 Object {
   "map": undefined,
-  "name": "199dyzj",
+  "name": "hoho0p",
   "next": undefined,
-  "styles": "@media(min-width:20rem){width:240px;font-size:16px;}",
+  "styles": "@media(min-width:20rem){width:240px;font-size:16px;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Single-media form with multiple plain objects with mixed units 1`] = `
 Object {
   "map": undefined,
-  "name": "zcnrwc",
+  "name": "1m065o1",
   "next": undefined,
-  "styles": "@media(min-width:20rem){width:240px;font-size:1rem;}",
+  "styles": "@media(min-width:20rem){width:240px;font-size:1rem;;}",
+  "toString": [Function],
 }
 `;
 
 exports[`Single-media form with tagged template literal 1`] = `
 Object {
   "map": undefined,
-  "name": "et70wo",
+  "name": "18xle3s",
   "next": undefined,
-  "styles": "@media(min-width:20rem){width: 18rem;}",
+  "styles": "@media(min-width:20rem){width: 18rem;;}",
+  "toString": [Function],
 }
 `;
 
@@ -127,6 +140,7 @@ Object {
   "name": "1sv7vo6",
   "next": undefined,
   "styles": "margin-left:1rem;margin-right:1rem;@media(min-width:28rem){margin-left:2rem;margin-right:2rem;}@media(min-width:60rem){margin-left:4rem;margin-right:4rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -136,6 +150,7 @@ Object {
   "name": "93qv2k",
   "next": undefined,
   "styles": "margin-top:1rem;margin-bottom:1rem;@media(min-width:28rem){margin-top:2rem;margin-bottom:2rem;}@media(min-width:60rem){margin-top:4rem;margin-bottom:4rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -145,6 +160,7 @@ Object {
   "name": "1x4cfvp",
   "next": undefined,
   "styles": "width:100%;@media(min-width:20rem){width:18rem;}@media(min-width:28rem){width:24rem;}@media(min-width:36rem){width:32rem;}@media(min-width:48rem){width:44rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -154,6 +170,7 @@ Object {
   "name": "1rsqg0i",
   "next": undefined,
   "styles": "width:100%;@media(min-width:20rem){width:18rem;}@media(min-width:28rem){width:24rem;}@media(min-width:36rem){width:32rem;}@media(min-width:48rem){width:44rem;}@media(min-width:60rem){width:54rem;}@media(min-width:75rem){width:72rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -163,6 +180,7 @@ Object {
   "name": "19x4o37",
   "next": undefined,
   "styles": "padding-left:1rem;padding-right:1rem;@media(min-width:28rem){padding-left:2rem;padding-right:2rem;}@media(min-width:60rem){padding-left:4rem;padding-right:4rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -172,6 +190,7 @@ Object {
   "name": "1jyjxt3",
   "next": undefined,
   "styles": "padding-top:1rem;padding-bottom:1rem;@media(min-width:28rem){padding-top:2rem;padding-bottom:2rem;}@media(min-width:60rem){padding-top:4rem;padding-bottom:4rem;}",
+  "toString": [Function],
 }
 `;
 
@@ -181,6 +200,7 @@ Object {
   "name": "1lcftrr",
   "next": undefined,
   "styles": "padding-bottom:4rem;",
+  "toString": [Function],
 }
 `;
 
@@ -190,5 +210,6 @@ Object {
   "name": "74iqde",
   "next": undefined,
   "styles": "width:1rem;height:1rem;@media(min-width:28rem){width:2rem;height:2rem;}@media(min-width:60rem){width:4rem;height:4rem;}",
+  "toString": [Function],
 }
 `;
