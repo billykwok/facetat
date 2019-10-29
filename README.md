@@ -5,8 +5,9 @@
 [![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
 [![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
 [![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://github.com/billykwok/facetat)
-[![License](https://badgen.net/npm/license/facetat)](https://github.com/billykwok/facetat/blob/master/LICENSE)
+[![Coverage](https://badgen.net/codecov/c/github/billykwok/facetat)](https://codecov.io/gh/billykwok/facetat)
 [![CircleCI](https://circleci.com/gh/billykwok/facetat/tree/master.svg?style=svg)](https://circleci.com/gh/billykwok/facetat/tree/master)
+[![License](https://badgen.net/npm/license/facetat)](https://github.com/billykwok/facetat/blob/master/LICENSE)
 
 A neat and efficient way to write responsive styles for CSS-in-Js libraries.
 
