@@ -1,1 +1,4 @@
-module.exports = { snapshotSerializers: ['jest-emotion'] };
+module.exports = {
+  collectCoverage: true,
+  snapshotSerializers: ['jest-emotion']
+};
