@@ -2,8 +2,8 @@
 
 [![npm version](https://badgen.net/npm/v/facetat)](https://www.npmjs.com/package/facetat)
 [![download](https://badgen.net/npm/dm/facetat)](https://www.npmjs.com/package/facetat)
-[![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
-[![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result?p=facetat@1.1.4)
+[![minified size](https://badgen.net/bundlephobia/min/facetat)](https://bundlephobia.com/result)
+[![GZip size](https://badgen.net/bundlephobia/minzip/facetat)](https://bundlephobia.com/result)
 [![Greenkeeper badge](https://badges.greenkeeper.io/billykwok/facetat.svg)](https://github.com/billykwok/facetat)
 [![codecov](https://codecov.io/gh/billykwok/facetat/branch/master/graph/badge.svg)](https://codecov.io/gh/billykwok/facetat)
 [![License](https://badgen.net/npm/license/facetat)](https://github.com/billykwok/facetat/blob/master/LICENSE)
