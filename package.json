@@ -49,6 +49,7 @@
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
     "lodash.merge": "^4.6.2",
+    "serialize-javascript": "^2.1.1",
     "underscore.string": "^3.3.5"
   },
   "peerDependencies": {
