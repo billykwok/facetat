@@ -45,6 +45,7 @@
     }
   },
   "resolutions": {
+    "debug": "^4.1.1",
     "mem": "^5.1.1",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
