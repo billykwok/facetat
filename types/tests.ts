@@ -8,6 +8,12 @@ const mq = facetat(
 
 mq.XS`width: 100rem;`;
 
+mq.XS.h(123)(
+  css`
+    width: 100rem;
+  `
+);
+
 mq.XS(
   css`
     width: 100rem;
