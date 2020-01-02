@@ -1,11 +1,11 @@
 import { css, SerializedStyles } from '@emotion/core';
-import * as CSS from 'csstype';
+import { Properties } from 'csstype';
 
 type CssPropertyValues = null | boolean | number | string;
 
-type CssProperties = CSS.Properties<CssPropertyValues> | SerializedStyles;
+type CssProperties = Properties<CssPropertyValues> | SerializedStyles;
 
-type CssPropertyKeys = keyof CSS.Properties<CssPropertyValues>;
+type CssPropertyKeys = keyof Properties<CssPropertyValues>;
 
 interface Mq {
   (
@@ -29,5 +29,9 @@ export default function facetat<
   > &
   Record<
     keyof T,
-    typeof css & ((...styles: CssProperties[]) => SerializedStyles)
+    typeof css & {
+      h: (
+        height: number | string
+      ) => (...styles: CssProperties[]) => SerializedStyles;
+    } & ((...styles: CssProperties[]) => SerializedStyles)
   >;
