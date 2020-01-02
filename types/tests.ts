@@ -14,6 +14,41 @@ mq.XS.h(123)(
   `
 );
 
+mq.XS.h(123)`width: 100rem;`;
+
+mq.XS.h(123)({ width: 100 });
+
+mq.XS.h(123)({ width: '100rem' });
+
+mq.w(123)(
+  css`
+    width: 100rem;
+  `
+);
+
+mq.w(123)`width: 100rem;`;
+
+mq.w(123)(
+  { width: 100 },
+  css`
+    height: 100rem;
+  `
+);
+
+mq.w(123)({ width: '100rem' });
+
+mq.h(123)(
+  css`
+    width: 100rem;
+  `
+);
+
+mq.h(123)`width: 100rem;`;
+
+mq.h(123)({ width: 100 });
+
+mq.h(123)({ width: '100rem' });
+
 mq.XS(
   css`
     width: 100rem;
