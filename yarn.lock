@@ -3646,25 +3646,25 @@ dotenv@^5.0.1:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
   integrity sha512-4As8uPrjfwb7VXC+WnLCbXK7y+Ueb2B3zgNCePYfhxS1PYeaO1YTeplffTEcbfLhvFNGLAz90VvJs9yomG7bow==
 
-dts-critic@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/dts-critic/-/dts-critic-2.2.4.tgz#3ef70be891eede2bdf2ff9e293d9ec398b9cf772"
-  integrity sha512-yGHhVKo66iyPBFUYRyXX1uW+XEG3/HDP1pHCR3VlPl9ho8zRHy6lzS5k+gCSuINqjNsV8UjZSUXUuTuw0wHp7g==
+dts-critic@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dts-critic/-/dts-critic-3.0.0.tgz#7a4ab37749b02a26e11154f88dfa8c6954e9b1ed"
+  integrity sha512-lRe77UamsPGrqGlWVRj/AYLYbNfu4lugTvwNQ4wrP8uCM0JP5X3zQLQxmNzMl1AzKF5YcGdHN47eEI2Hfs6P+g==
   dependencies:
     command-exists "^1.2.8"
     definitelytyped-header-parser "^3.8.2"
     semver "^6.2.0"
+    typescript "^3.7.5"
     yargs "^12.0.5"
 
-dtslint@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/dtslint/-/dtslint-2.0.3.tgz#56147e45fdf7aefdedb9052033fb24fbe48abbb7"
-  integrity sha512-6zTTsVPhomVfy+G+tGZfduzbLkGTKE/iid3IUy7fflaT4Atv0EqIcKKtkuUjrP45fWslI789E4u9e8ymn6Xyew==
+dtslint@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dtslint/-/dtslint-3.0.0.tgz#d89224ffe517df208c09012027ffd6da53b553d8"
+  integrity sha512-DXCFLHZWCtqo45AiWM5uFE/+3DUH+5I+a0QiayG4vVWgWm9/4UD5lPuGhQz51P8iJDtO+gtnEEUOHbbpVAsrHQ==
   dependencies:
     definitelytyped-header-parser "3.8.2"
-    dts-critic "^2.2.4"
+    dts-critic "^3.0.0"
     fs-extra "^6.0.1"
-    request "^2.88.0"
     strip-json-comments "^2.0.1"
     tslint "5.14.0"
     typescript next
@@ -9553,6 +9553,11 @@ typescript@^3.7.4:
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.4.tgz#1743a5ec5fef6a1fa9f3e4708e33c81c73876c19"
   integrity sha512-A25xv5XCtarLwXpcDNZzCGvW2D1S3/bACratYBx2sax8PefsFhlYmkQicKHvpYflFS8if4zne5zT5kpJ7pzuvw==
+
+typescript@^3.7.5:
+  version "3.7.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"
+  integrity sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
 
 typescript@next:
   version "3.8.0-dev.20200101"
