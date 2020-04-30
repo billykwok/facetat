@@ -76,7 +76,7 @@
     "codecov": "^3.6.1",
     "cross-env": "^6.0.3",
     "csstype": "^2.6.8",
-    "dtslint": "^2.0.3",
+    "dtslint": "^3.5.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
